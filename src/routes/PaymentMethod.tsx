@@ -1,11 +1,16 @@
-import Pix_default from "../components/PixPadrao";
+import PixPadrao from "../components/PixPadrao";
 import WooviLogo from "../assets/wooviLogo_md.svg";
+import PixParcelado from "../components/PixParcelado";
+import "../styles/PaymentMethod.css";
 
 function PaymentMethod() {
   return (
     <>
-      <img src={WooviLogo}></img>
-      <Pix_default />
+      <section className="Payment">
+        <img src={WooviLogo}></img>
+        <PixPadrao />
+        <PixParcelado/>
+      </section>
     </>
   );
 }
