@@ -1,11 +1,7 @@
 :root {
-  width: auto;
-  display: flex;
   line-height: 1.5;
   font-weight: 400;
-  align-items: center;
   font-synthesis: none;
-  flex-direction: column;
   box-sizing: border-box;
   color-scheme: light dark;
   -moz-osx-font-smoothing: grayscale;
@@ -14,7 +10,6 @@
 }
 
 body {
-  width: 100%;
   padding-inline: 20px;
 }
 

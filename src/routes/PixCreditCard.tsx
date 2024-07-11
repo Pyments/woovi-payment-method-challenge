@@ -1,5 +1,3 @@
-import "../styles/PixCreditCard.css";
-
 import {
   Button,
   Grid,

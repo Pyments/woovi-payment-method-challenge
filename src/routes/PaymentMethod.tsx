@@ -1,39 +1,84 @@
-import "../styles/PaymentMethod.css";
-
-import { Button, FormControl, FormLabel, RadioGroup } from "@mui/material";
+import {
+  Box,
+  Button,
+  Container,
+  FormControl,
+  FormLabel,
+  RadioGroup,
+  Typography,
+} from "@mui/material";
+import { Link } from "react-router-dom";
 
 import Footer from "../components/Footer";
 import PixPadrao from "../components/PixPadrao";
 import HeaderLogo from "../components/HearderLogo";
 import PixParcelado from "../components/PixParcelado";
-import { Link } from "react-router-dom";
 
 function PaymentMethod() {
   return (
     <>
       <HeaderLogo />
-      <h1 className="title">Como deseja efetuar o pagamento?</h1>
-      <section className="payment">
+      <Typography
+        variant="h2"
+        sx={{ textAlign: "center", my: 5 }}
+        className="title"
+      >
+        Como deseja efetuar o pagamento?
+      </Typography>
+      <Container
+        component={"section"}
+        sx={{ width: "max-content", alignItems: "center" }}
+      >
         <FormControl className="pix">
           <RadioGroup aria-labelledby="Pix" name="pix-buttons-group">
-            <div className="pix__column">
-              <span className="pix__title__bubble">
-                <FormLabel className="pix__title">Pix</FormLabel>
-              </span>
+            <Box sx={{ position: "relative", marginBottom: "30px" }}>
+              <Box
+                sx={{
+                  top: "-16px",
+                  marginLeft: "10px",
+                  bgColor: "#e5e5e5",
+                  padding: "5px 16px",
+                  position: "absolute",
+                  borderRadius: "100px",
+                  backgroundColor: "#E5E5E5",
+                }}
+              >
+                <FormLabel
+                  sx={{ color: "#4d4d4d", fontSize: "18px", fontWeight: 800 }}
+                >
+                  Pix
+                </FormLabel>
+              </Box>
               <PixPadrao />
-            </div>
-            <div className="pix__column">
-              <span className="pix__title__bubble">
-                <FormLabel className="pix__title">Pix Parcelado</FormLabel>
-              </span>
+            </Box>
+            <Box sx={{ position: "relative", marginBottom: "30px" }}>
+              <Box
+                component={"span"}
+                sx={{
+                  top: "-16px",
+                  marginLeft: "10px",
+                  padding: "5px 16px",
+                  position: "absolute",
+                  borderRadius: "100px",
+                  backgroundColor: "#E5E5E5",
+                }}
+              >
+                <FormLabel
+                  sx={{ color: "#4d4d4d", fontSize: "18px", fontWeight: 800 }}
+                >
+                  Pix Parcelado
+                </FormLabel>
+              </Box>
               <PixParcelado />
-            </div>
+            </Box>
           </RadioGroup>
         </FormControl>
-        <Link to={"/credit-card"}>
-          <Button>Efetuar pagamento</Button>
-        </Link>
-      </section>
+        <Container sx={{ width: "max-content", alignItems: "center", mb: 5, mt: 3 }}>
+          <Link to={"/credit-card"}>
+            <Button variant="contained" sx={{px: 20, py: 2}}>Efetuar pagamento</Button>
+          </Link>
+        </Container>
+      </Container>
       <Footer />
     </>
   );
