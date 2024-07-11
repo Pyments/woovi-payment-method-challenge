@@ -1,24 +1,28 @@
 import "./index.css";
 import React from "react";
-import App from "./App.tsx";
 import ReactDOM from "react-dom/client";
 import { CssBaseline } from "@mui/material";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import ErrorPage from "./routes/ErrorPage.tsx";
 import PaymentMethod from "./routes/PaymentMethod.tsx";
+import PixCreditCard from "./routes/PixCreditCard.tsx";
+import PixQr from "./routes/PixQr.tsx";
+
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <PaymentMethod />,
     errorElement: <ErrorPage />,
-    children: [
-      {
-        path: "/",
-        element: <PaymentMethod />,
-      },
-    ],
+  },
+  {
+    path: "/credit-card",
+    element: <PixCreditCard />,
+  },
+  {
+    path: "/qr",
+    element: <PixQr />,
   },
 ]);
 
