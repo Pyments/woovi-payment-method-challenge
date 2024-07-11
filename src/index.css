@@ -1,7 +1,10 @@
 :root {
+  display: flex;
   line-height: 1.5;
   font-weight: 400;
+  align-items: center;
   font-synthesis: none;
+  flex-direction: column;
   color-scheme: light dark;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;

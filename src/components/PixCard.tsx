@@ -10,9 +10,9 @@ interface IPixCard {
 function PixCard({ i, price, tag, cashback }: IPixCard) {
   return (
     <div className="pixRadio__card">
-      <FormControlLabel value={i} control={<Radio />} label={price} />
-      <span className="pixRadio__cashback">{cashback}</span>
+      <span className="pixRadio__cashback">{cashback > 0 ? cashback : ""}</span>
       <span className="pixRadio__discountTag">{tag}</span>
+      <FormControlLabel labelPlacement={"start"} value={i} control={<Radio />} label={price} />
     </div>
   );
 }

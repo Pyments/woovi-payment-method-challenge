@@ -1,11 +1,9 @@
-import { FormLabel } from "@mui/material";
 import PixCard from "./PixCard";
 
 function PixPadrao() {
   return (
     <>
       <div className="pixRadio">
-        <FormLabel className="pixRadio_labelTitle">Pix Parcelado</FormLabel>
         <PixCard i={1} price={15300} tag={" "} cashback={0} />
         <PixCard i={2} price={10196.66} tag={" "} cashback={0} />
         <PixCard

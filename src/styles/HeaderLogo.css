@@ -1,3 +1,11 @@
-logo {
-    width: clamp(1vw, 100px, 100vw );
+.logo {
+    display: flex;
+    align-items: center;
+    margin: clamp(20px, 40vw, 40px) 0px;
+    margin-top: clamp(10px, 40vw, 20px);
+}
+
+.logo__image {
+  margin: auto;
+  width: clamp(100px, 40vw, 200px);
 }
