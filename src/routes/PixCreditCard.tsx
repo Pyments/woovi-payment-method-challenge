@@ -1,21 +1,28 @@
 import {
-  Button,
   Grid,
   Step,
-  StepLabel,
+  Button,
   Stepper,
+  StepLabel,
   TextField,
+  Typography,
 } from "@mui/material";
 
 import Footer from "../components/Footer";
-import PageTitle from "../components/PageTitle";
+
 import HeaderLogo from "../components/HearderLogo";
 
 function PixCreditCard() {
   return (
     <>
       <HeaderLogo />
-      <PageTitle title={"Pague o restante em x no cartão"} />
+      <Typography
+        variant="h2"
+        sx={{ textAlign: "center", my: 5 }}
+        className="title"
+      >
+        Como deseja efetuar o pagamento?
+      </Typography>
       <Grid container spacing={2}>
         <Grid item xs={12}>
           <TextField fullWidth label={"Nome completo"}></TextField>

@@ -1,10 +1,16 @@
+import { Box } from "@mui/material";
+
 import PixCard from "./PixCard";
-import "../styles/components/PixWrapper.css";
 
 function PixPadrao() {
   return (
     <>
-      <div className="pix__wrapper">
+      <Box
+        sx={{
+          borderRadius: "10px",
+          border: "2px solid #e5e5e5",
+        }}
+      >
         <PixCard i={2} price={15300} total={true} />
         <PixCard i={3} price={10196.66} total={true} />
         <PixCard
@@ -16,7 +22,7 @@ function PixPadrao() {
         <PixCard i={5} price={6300.0} total={true} />
         <PixCard i={6} price={5283.33} total={true} />
         <PixCard i={7} price={4542.85} total={true} />
-      </div>
+      </Box>
     </>
   );
 }
