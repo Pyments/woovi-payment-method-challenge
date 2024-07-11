@@ -1,4 +1,4 @@
-import "../styles/HeaderLogo.css";
+import "../styles/components/HeaderLogo.css";
 import WooviLogo from "../assets/wooviLogo_md.svg";
 
 function HeaderLogo() {

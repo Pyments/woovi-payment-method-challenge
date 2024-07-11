@@ -1,0 +1,60 @@
+.card {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #e5e5e5;
+  padding: 20px 15px;
+}
+
+.card__radio {
+  display: flex;
+}
+
+.card__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+@media (min-width: 980px) {
+  .card__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
+
+.card__tranche {
+  font-weight: 800;
+  font-size: 24px;
+}
+
+.card__tranche::after {
+  content: " ";
+}
+
+.card__price {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.card__total {
+  color: #afafaf;
+  font-size: 16px;
+}
+
+.card__cashback {
+  font-size: 16px;
+  color: #03d69d;
+  font-weight: 600;
+}
+
+.card__tag {
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 3px 20px 3px 5px;
+  background-color: #133a6f;
+}

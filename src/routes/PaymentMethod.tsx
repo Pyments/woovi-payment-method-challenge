@@ -11,6 +11,7 @@ function PaymentMethod() {
   return (
     <>
       <HeaderLogo />
+      <h1 className="title">Como deseja pagar?</h1>
       <section className="payment">
         <FormControl className="pix">
           <RadioGroup

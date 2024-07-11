@@ -1,4 +1,5 @@
 :root {
+  width: auto;
   display: flex;
   line-height: 1.5;
   font-weight: 400;
@@ -9,7 +10,10 @@
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  font-family: Nunito, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  width: 100%;
 }
 
 @font-face {

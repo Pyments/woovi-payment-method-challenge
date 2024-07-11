@@ -1,4 +1,4 @@
-import "../styles/Footer.css";
+import "../styles/components/Footer.css";
 import Shield from "../assets/shield_sm.svg";
 import WooviSmall from "../assets/wooviLogo_sm.svg";
 
