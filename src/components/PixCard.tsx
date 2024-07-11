@@ -1,15 +1,16 @@
 import { FormControlLabel, Radio } from "@mui/material";
 
 interface IPixCard {
-  cashback: number;
-  price: number;
+  i: number;
   tag: string;
+  price: number;
+  cashback: number;
 }
 
-function PixCard({ price, tag, cashback }: IPixCard) {
+function PixCard({ i, price, tag, cashback }: IPixCard) {
   return (
     <div className="pixRadio__card">
-      <FormControlLabel value={1} control={<Radio />} label={price} />
+      <FormControlLabel value={i} control={<Radio />} label={price} />
       <span className="pixRadio__cashback">{cashback}</span>
       <span className="pixRadio__discountTag">{tag}</span>
     </div>
