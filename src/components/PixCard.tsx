@@ -1,5 +1,4 @@
-import "../styles/components/PixCard.css";
-import { Radio } from "@mui/material";
+import { Box, Radio } from "@mui/material";
 
 interface IPixCard {
   i: number;
@@ -11,21 +10,96 @@ interface IPixCard {
 
 function PixCard({ i, price, tag, cashback, total }: IPixCard) {
   return (
-    <div className="card">
-      <div className="card__wrapper">
-        <span className="card__tranche">
-          {i}x <span className="card__price">{price.toFixed(2)}</span>
-        </span>
+    <Box
+      sx={{
+        px: 2,
+        pt: 3,
+        pb: 2,
+        display: "flex",
+        justifyContent: "space-between",
+        borderBottom: "1px solid #e5e5e5",
+      }}
+    >
+      <Box
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          alignItems: "center",
+          alignContent: "center",
+          flexDirection: "column",
+        }}
+      >
+        <Box
+          component="span"
+          sx={{
+            width: 1,
+            fontWeight: 800,
+            fontSize: "24px",
+          }}
+        >
+          {i}x{" "}
+          <Box
+            component="span"
+            sx={{
+              ml: 0,
+              fontSize: "24px",
+              fontWeight: 500,
+            }}
+          >
+            {price.toFixed(2)}
+          </Box>
+        </Box>
         {total && (
-          <span className="card__total">Total: {(price * i).toFixed(2)}</span>
+          <Box
+            component="span"
+            sx={{
+              width: 1,
+              fontSize: "16px",
+              color: "text.disabled",
+            }}
+          >
+            Total: {(price * i).toFixed(2)}
+          </Box>
         )}
         {cashback && (
-          <span className="card__cashback">{`Ganhe ${cashback}% de Cashback`}</span>
+          <Box
+            sx={{
+              width: 1,
+              color: "primary.main",
+              fontSize: "16px",
+              fontWeight: 600,
+            }}
+          >{`Ganhe ${cashback}% de Cashback`}</Box>
         )}
-        {tag && <span className="card__tag">{tag}</span>}
-      </div>
+        {tag && (
+          <Box
+            sx={{
+              color: "#ffffff",
+              borderRadius: "5px",
+              position: "relative",
+              padding: "7px 30px 5px 7px",
+              bgcolor: "secondary.main",
+              ":after": {
+                content: "''",
+                top: 0,
+                right: "-2px",
+                width: "20px",
+                height: 1,
+                position: "absolute",
+                pointerEvents: "none",
+                backgroundColor: "#ffffff",
+                clipPath: "polygon(102% 0, 102% 100%, 0 50%, 100% 0)",
+                shapeOutside: "polygon(102% 0, 102% 100%, 0 50%, 100% 0)",
+              }
+            }}
+            className="card__tag"
+          >
+            {tag}
+          </Box>
+        )}
+      </Box>
       <Radio value={i} className="card__radio" />
-    </div>
+    </Box>
   );
 }
 

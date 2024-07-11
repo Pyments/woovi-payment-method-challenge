@@ -1,14 +1,24 @@
-import "../styles/components/Footer.css";
 import Shield from "../assets/shield_sm.svg";
 import WooviSmall from "../assets/wooviLogo_sm.svg";
+import { Box, Container } from "@mui/material";
 
 function Footer() {
   return (
-    <div className="footer">
-      <img className="footer__image" src={Shield}></img>
-      <span className="footer__text">Pagamento 100% seguro via</span>
-      <img className="footer__image" src={WooviSmall}></img>
-    </div>
+    <Container
+      sx={{
+        my: 5,
+        display: "flex",
+        flexDirection: "row",
+        width: "max-content",
+        alignItems: "center",
+      }}
+    >
+      <Box component="img" sx={{ mb: 0.3 }} src={Shield} />
+      <Box component="p" color="text.disabled" sx={{ px: 1 }}>
+        Pagamento 100% seguro via
+      </Box>
+      <Box component="img" sx={{ mb: 0.3 }} src={WooviSmall} />
+    </Container>
   );
 }
 
