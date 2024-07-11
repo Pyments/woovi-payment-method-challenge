@@ -1,9 +1,10 @@
 import PixCard from "./PixCard";
+import "../styles/components/PixWrapper.css";
 
 function PixPadrao() {
   return (
     <>
-      <div className="pixRadio">
+      <div className="pix__wrapper">
         <PixCard i={2} price={15300} total={true} />
         <PixCard i={3} price={10196.66} total={true} />
         <PixCard

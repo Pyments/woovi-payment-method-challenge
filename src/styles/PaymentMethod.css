@@ -10,5 +10,25 @@
   flex-direction: column;
 }
 
+.pix__column {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.pix__title__bubble {
+  top: -16px;
+  padding: 5px 16px;
+  margin-left: 10px;
+  position: absolute;
+  border-radius: 100px;
+  background-color: #e5e5e5;
+}
+
+.pix__title {
+  color: #4d4d4d;
+  font-size: 18px;
+  font-weight: 800 !important;
+}
+
 .pix_column {
 }

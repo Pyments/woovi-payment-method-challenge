@@ -2,32 +2,29 @@
   width: 100%;
   display: flex;
   flex-wrap: nowrap;
+  padding: 20px 15px;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 2px solid #e5e5e5;
-  padding: 20px 15px;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .card__radio {
   display: flex;
+  color: #03d69d;
 }
 
 .card__wrapper {
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-}
-
-@media (min-width: 980px) {
-  .card__wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
+  align-items: center;
+  align-content: center;
 }
 
 .card__tranche {
+  width: 100%;
   font-weight: 800;
   font-size: 24px;
 }
@@ -37,24 +34,50 @@
 }
 
 .card__price {
+  margin-left: 0;
   font-size: 24px;
   font-weight: 600;
 }
 
 .card__total {
+  width: 100%;
   color: #afafaf;
   font-size: 16px;
 }
 
 .card__cashback {
-  font-size: 16px;
+  width: 100%;
   color: #03d69d;
+  font-size: 16px;
   font-weight: 600;
 }
 
 .card__tag {
   color: #ffffff;
   border-radius: 5px;
-  padding: 3px 20px 3px 5px;
+  position: relative;
+  padding: 3px 30px 3px 5px;
   background-color: #133a6f;
+}
+
+.card__tag::after {
+  content: "";
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 100%;
+  position: absolute;
+  pointer-events: none;
+  background-color: #ffffff;
+  clip-path: polygon(102% 0, 102% 100%, 0 50%, 100% 0);
+  shape-outside: polygon(102% 0, 102% 100%, 0 50%, 100% 0);
+}
+
+@media (min-width: 720px) {
+  .card__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
 }
