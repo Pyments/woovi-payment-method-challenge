@@ -16,7 +16,7 @@ import PixParcelado from "../components/PixParcelado";
 
 function PaymentMethod() {
   return (
-    <Container>
+    <Container sx={{margin: "0 auto"}}>
       <HeaderLogo />
       <Typography
         variant="h2"
@@ -74,7 +74,7 @@ function PaymentMethod() {
           sx={{ width: "max-content", alignItems: "center", mb: 5, mt: 3 }}
         >
           <Link to={"/credit-card"}>
-            <Button variant="contained" sx={{ px: 20, py: 2 }}>
+            <Button variant="contained" sx={{ px: 5, py: 2, w: 1 }}>
               Efetuar pagamento
             </Button>
           </Link>
