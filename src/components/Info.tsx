@@ -34,10 +34,10 @@ function Info() {
           <StepLabel>
             <Grid container>
               <Grid item xs={6}>
-                <Typography sx={{ textAlign: "left" }}>2° no cartão</Typography>
+                <Typography sx={{ textAlign: "left" }}>1° entrada no íx</Typography>
               </Grid>
               <Grid item xs={6}>
-                <Typography sx={{ textAlign: "right" }}>R$ 00000</Typography>
+                <Typography sx={{ textAlign: "right" }}>R$ 15.300,00</Typography>
               </Grid>
             </Grid>
           </StepLabel>
@@ -49,7 +49,7 @@ function Info() {
                 <Typography sx={{ textAlign: "left" }}>2° no cartão</Typography>
               </Grid>
               <Grid item xs={6}>
-                <Typography sx={{ textAlign: "right" }}>R$ 00000</Typography>
+                <Typography sx={{ textAlign: "right" }}>R$ 15.300,00</Typography>
               </Grid>
             </Grid>
           </StepLabel>
@@ -68,7 +68,7 @@ function Info() {
         }}
       >
         <Typography sx={{ textAlign: "left" }}>CET: 0,5%</Typography>
-        <Typography sx={{ textAlign: "right" }}>Total: R$ 31.500</Typography>
+        <Typography sx={{ textAlign: "right" }}>Total: R$ 31.500,00</Typography>
       </Box>
       <Grid item xs={12}>
         <Grid item xs={12}>
@@ -84,12 +84,14 @@ function Info() {
             </AccordionDetails>
           </Accordion>
         </Grid>
-        <Typography sx={{ textAlign: "center", width: 1, mt: 4 }}>
-          Identificador:
-        </Typography>
-        <Typography variant="h6" sx={{ textAlign: "center", width: 1 }}>
-          2c1b951f356c4680b13ba1c9fc889c47
-        </Typography>
+        <Grid>
+          <Typography sx={{ textAlign: "center", width: 1, mt: 4 }}>
+            Identificador:
+          </Typography>
+          <Typography component="p" variant="h6" sx={{ textAlign: "center", textWrap: "wrap"}}>
+            2c1b951f356c
+          </Typography>
+        </Grid>
       </Grid>
     </Container>
   );

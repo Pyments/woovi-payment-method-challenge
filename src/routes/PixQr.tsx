@@ -15,26 +15,28 @@ function PixQr() {
       <Typography variant="h2" sx={{ textAlign: "center", my: 5 }}>
         Pague a entrada de R$ VALOR pelo pix
       </Typography>
-      <Box
-        component="img"
-        src={QR_example}
-        sx={{
-          height: "100%",
-          padding: "8px",
-          margin: "auto 0",
-          maxWidth: "600px",
-          border: "2px solid",
-          borderRadius: "10px",
-          borderColor: "primary.main",
-        }}
-      />
+      <Container sx={{ display: "flex", justifyContent: "center", mb: 2 }}>
+        <Box
+          component="img"
+          src={QR_example}
+          sx={{
+            mx: "auto",
+            width: 1,
+            padding: "8px",
+            maxWidth: "400px",
+            border: "2px solid",
+            objectFit: "contain",
+            borderRadius: "10px",
+            borderColor: "primary.main",
+          }}
+        />
+      </Container>
       <Container sx={{ display: "flex", alignItems: "center" }}>
         <Button
           color="secondary"
           variant="contained"
           sx={{
             py: 1.5,
-            minWidth: "60%",
             margin: "0 auto",
             borderRadius: "8px",
             justifySelf: "center",

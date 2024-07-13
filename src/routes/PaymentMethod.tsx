@@ -16,7 +16,7 @@ import PixParcelado from "../components/PixParcelado";
 
 function PaymentMethod() {
   return (
-    <Container >
+    <Container>
       <HeaderLogo />
       <Typography
         variant="h2"
@@ -25,7 +25,15 @@ function PaymentMethod() {
       >
         Como deseja efetuar o pagamento?
       </Typography>
-      <Box sx={{ width: 1, alignItems: "center", display: "flex", flexDirection: "column" }} component={"section"}>
+      <Box
+        component={"section"}
+        sx={{
+          width: 1,
+          display: "flex",
+          alignItems: "center",
+          flexDirection: "column",
+        }}
+      >
         <FormControl className="pix">
           <RadioGroup aria-labelledby="Pix" name="pix-buttons-group">
             <Box sx={{ position: "relative", marginBottom: "30px" }}>
@@ -73,12 +81,17 @@ function PaymentMethod() {
         <Container
           sx={{ width: "max-content", alignItems: "center", mb: 5, mt: 3 }}
         >
-          <Link to={"/credit-card"}>
+          <Link to={"/qr"}>
             <Button variant="contained" sx={{ px: 5, py: 2, w: 1 }}>
-              Efetuar pagamento
+              Efetuar pagamento em PIX
             </Button>
           </Link>
         </Container>
+          <Link to={"/credit-card"}>
+            <Button variant="contained" sx={{ px: 5, py: 2, w: 1 }}>
+              Efetuar pagamento em Crédito
+            </Button>
+          </Link>
       </Box>
       <Footer />
     </Container>
