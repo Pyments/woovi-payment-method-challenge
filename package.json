@@ -1,12 +1,12 @@
 {
   "name": "woovi-payment-method-challenge",
-  "homepage": "https://Pyments.github.io/woovi-payment-method-challenge/",
+  "homepage": "https://eduardo-pyment.github.io/woovi-payment-method-challenge/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc -b && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
