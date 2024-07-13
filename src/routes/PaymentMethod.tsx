@@ -16,7 +16,7 @@ import PixParcelado from "../components/PixParcelado";
 
 function PaymentMethod() {
   return (
-    <Container sx={{margin: "0 auto"}}>
+    <Container >
       <HeaderLogo />
       <Typography
         variant="h2"

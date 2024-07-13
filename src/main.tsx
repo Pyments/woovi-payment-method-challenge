@@ -37,7 +37,7 @@ const theme = createTheme({
       primary: "#4D4D4D",
       secondary: "#4D4D4D",
       disabled: "#B2B2B2",
-    }
+    },
   },
   typography: {
     h1: {
@@ -58,9 +58,10 @@ const theme = createTheme({
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <CssBaseline />
-    <ThemeProvider theme={theme}>
-      <RouterProvider router={router} />
-    </ThemeProvider>
+    <CssBaseline>
+      <ThemeProvider theme={theme}>
+        <RouterProvider router={router} />
+      </ThemeProvider>
+    </CssBaseline>
   </React.StrictMode>
 );

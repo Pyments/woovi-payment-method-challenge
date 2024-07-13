@@ -19,11 +19,7 @@ function PixCreditCard() {
   return (
     <Container>
       <HeaderLogo />
-      <Typography
-        variant="h2"
-        sx={{ textAlign: "center", my: 5 }}
-        className="title"
-      >
+      <Typography variant="h2" sx={{ textAlign: "center", my: 5 }}>
         Como deseja efetuar o pagamento?
       </Typography>
       <Grid container spacing={3}>
@@ -55,7 +51,8 @@ function PixCreditCard() {
             variant="contained"
             color="secondary"
             sx={{
-              width: 1,
+              py: 1.5,
+              minWidth: "60%",
               margin: "0 auto",
               borderRadius: "8px",
               justifySelf: "center",
@@ -64,7 +61,7 @@ function PixCreditCard() {
             Pagar
           </Button>
         </Grid>
-          <Info/>
+        <Info />
       </Grid>
       <Footer />
     </Container>
